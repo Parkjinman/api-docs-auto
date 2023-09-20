@@ -7,13 +7,13 @@
 <summary>목차</summary>
 <ol>
   <li>
-    <a href="#설치 버전">설치 버전</a>
+    <a href="#설치-버전">설치 버전</a>
   </li>
   <li>
-    <a href="#설치 과정">설치 과정</a>
+    <a href="#설치-과정">설치 과정</a>
   </li>
   <li>
-    <a href="#설치 확인">설치 확인</a>
+    <a href="#설치-확인">설치 확인</a>
   </li>
 </ol>
 
