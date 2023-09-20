@@ -1,6 +1,6 @@
 # api-docs-auto 사용 가이드
-Swagger UI와 Spring RestDocs의 장점들을 활용한 통합 샘플 코드입니다.
-컬리 기술 블로그를 참고하였습니다.
+#### Swagger UI와 Spring RestDocs의 장점들을 활용한 통합 샘플 코드입니다.
+#### 컬리 기술 블로그를 참고하였습니다.
 (https://helloworld.kurly.com/blog/spring-rest-docs-guide/)
 
 <!-- TABLE OF CONTENTS -->
