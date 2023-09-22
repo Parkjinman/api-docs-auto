@@ -68,5 +68,5 @@
 ### Spring REST Docs - OpenAPI Specification Integration
 [http://localhost:9080/swagger/swagger-ui.html]()
 
-### Springdoc
+### Springdoc Swagger-UI
 [http://localhost:9080/swagger-ui/index.html]()

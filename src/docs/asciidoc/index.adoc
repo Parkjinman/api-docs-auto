@@ -1,6 +1,4 @@
 = Spring REST Docs 가이드
-김지헌(팀 엔지니어링 팀), <jiheon.kim@kurlycorp.com>
-v2022.09.28, 2022-09-28
 :doctype: book
 :icons: font
 :source-highlighter: coderay
