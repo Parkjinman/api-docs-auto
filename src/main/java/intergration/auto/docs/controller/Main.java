@@ -11,6 +11,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 @RestController
+//@RequestMapping("/api/v1")
 public class Main {
     @GetMapping("/hello-world")
     public ResponseEntity<Map<String,Object>> helloWorld(

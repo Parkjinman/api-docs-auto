@@ -84,6 +84,44 @@ openapi3 {
     format = 'yaml'
 }
 
+// Swagger 문서 경로 수정
+//tasks.register("modifySwaggerPaths") {
+//    dependsOn("openapi3") // openapi3 태스크 실행 후 수정 수행
+//
+//    doLast {
+//        def openApiDir = file("${buildDir}/api-spec")
+//        def openApiFile = new File(openApiDir, "openapi3.yaml") // OpenAPI 문서 파일
+//
+//        if (!openApiFile.exists()) {
+//            throw new GradleException("OpenAPI 파일이 존재하지 않습니다: ${openApiFile.absolutePath}")
+//        }
+//
+//        // SnakeYAML 사용
+//        def yamlParser = new org.yaml.snakeyaml.Yaml()
+//        def yamlData = yamlParser.load(openApiFile.text)
+//
+//        def updatedPaths = [:]
+//        yamlData.paths.each { path, pathItem ->
+//            def newPath = path.replaceFirst("^/[^/]+/[^/]+", "") // '/depth1/depth2' prefix 제거
+////            def newPath = path.replaceFirst("^/api/v1", "") // '/api/v1' prefix 제거
+//
+//            def matcher = newPath =~ /^\/([^\/]+)/
+//
+//            // 각 HTTP 메서드 수준의 태그 정리
+//            pathItem.each { method, operation ->
+//                def threeName = matcher[0][1] // 첫 번째 경로를 추출
+//                operation.tags = [threeName.capitalize()]
+//            }
+//
+//            updatedPaths[newPath] = pathItem
+//        }
+//
+//        yamlData.paths = updatedPaths
+//        // 수정된 파일 저장
+//        openApiFile.text = yamlParser.dump(yamlData)
+//    }
+//}
+
 tasks.register("apiBuild", GradleBuild) {
     tasks = ["clean", "restDocsTest", "build"]
 }
@@ -111,3 +149,13 @@ bootJar {
 
     archiveFileName.set "application.jar"
 }
+
+// application.jar 이외 jar파일 생성 방지
+//jar {
+//    enabled = false
+//}
+
+// test task 비활성화
+// tasks.named('test') {
+//     enabled = false
+// }
